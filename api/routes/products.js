@@ -4,6 +4,7 @@ const Product = require("../models/product");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const  path  = require("path");
+const checkAuth = require("../middleware/check-auth")
 
 const filename = `${(new Date().toJSON().slice(0,10))}`
 
@@ -67,7 +68,7 @@ router.get("/", (req, res, next) => {
     });
 });
 
-router.post("/", upload.single('productImage'), (req, res, next) => {
+router.post("/", checkAuth, upload.single('productImage'), (req, res, next) => {
   console.log(req.file);
   console.log(req.body);
   // const file = req.files.productImage;
