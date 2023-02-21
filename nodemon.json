@@ -1,6 +1,7 @@
 {
     "env": {
         "MONGO_ATLAS_PW": "lmaoDedHeHe",
-        "MONGO_ATLAS_UN": "imVicky"
+        "MONGO_ATLAS_UN": "imVicky",
+        "JWT_KEY": "imGonnaSmashYourBoy"
     }
 }
